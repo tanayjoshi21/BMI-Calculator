@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#212121">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/centervertical"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/hieghtlayout"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/cardbackgroung">
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Height :"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <!--        <SeekBar-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_marginBottom="21dp"-->
+        <!--            />-->
+
+        <EditText
+            android:id="@+id/edtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/height"
+            android:inputType="number"
+            android:text="170"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/edtext"
+            android:text="Cm"
+            android:textColor="@color/white"
+            android:textSize="35sp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:id="@+id/weightlayout"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/hieghtlayout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/cardbackgroung">
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Weight :"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <!--        <SeekBar-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_marginBottom="21dp"-->
+        <!--            />-->
+
+        <EditText
+            android:id="@+id/ed1text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/weight"
+            android:inputType="number"
+            android:text="60"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/ed1text"
+            android:text="Kg"
+            android:textColor="@color/white"
+            android:textSize="35dp" />
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/weightlayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="130dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="51dp"
+        android:background="@drawable/buttonbackground"
+        android:text="   calculate BMI!  "
+        android:textSize="25dp" />
+
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="25dp"
+        android:layout_toStartOf="@id/centervertical"
+        android:background="@drawable/cardbackgroung">
+
+        <ImageView
+            android:id="@+id/maleimg"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/male" />
+
+        <TextView
+            android:id="@+id/maletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maleimg"
+            android:layout_centerInParent="true"
+            android:text="Male"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@id/centervertical"
+        android:background="@drawable/cardbackgroung">
+
+        <ImageView
+            android:id="@+id/femaleimg"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/female" />
+
+        <TextView
+            android:id="@+id/femaletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/femaleimg"
+            android:layout_centerInParent="true"
+            android:text="Female"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <!--end of main relative layout-->
+</RelativeLayout>
